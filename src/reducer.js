@@ -1,8 +1,8 @@
 import { MOUSE_MOVE } from './action';
 
 const INITIAL_STATE = {
-	x: null,
-	y: null
+	x: 0,
+	y: 0
 };
 
 function reducer(state = INITIAL_STATE, action) {

@@ -8,14 +8,18 @@ function App() {
 	const compRef = useRef(null);
 	const { x, y } = useSelector(state => state);
 	const dispatch = useDispatch();
+	compRef.current &&
+		TweenLite.to(compRef.current, 0.2, {
+			x,
+			y
+		});
 	useEffect(() => {
 		window.addEventListener('mousemove', onMouseMove);
 		return () => window.removeEventListener('mousemove', onMouseMove);
 	});
 	const onMouseMove = e => {
-		dispatch(setMouseMove({ x: e.clientX, y: e.clientY }));
+		dispatch(setMouseMove({ x: e.clientX - 25, y: e.clientY - 25 }));
 	};
-	console.log(x, y);
 	return (
 		<div className='screen'>
 			<div className='circle' ref={compRef} />
