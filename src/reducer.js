@@ -10,8 +10,8 @@ function reducer(state = INITIAL_STATE, action) {
 		case MOUSE_MOVE:
 			return {
 				...state,
-				x: action.payload.data.x,
-				y: action.payload.data.y
+				x: action.payload.x,
+				y: action.payload.y
 			};
 		default:
 			return state;
