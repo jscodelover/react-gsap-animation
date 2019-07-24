@@ -81,7 +81,7 @@ function App() {
 		return Math.floor(Math.random() * Math.floor(max));
 	}
 	return (
-		<div className='screen'>
+		<div>
 			{compRefs.map((ref, index) => (
 				<div key={index + 1} className='circle' ref={ref} />
 			))}
